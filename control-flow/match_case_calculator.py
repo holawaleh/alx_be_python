@@ -1,9 +1,6 @@
-# match_case_calculator.py
-
-num1 = float(input("Enter the first number: "))
-num2 = float(input("Enter the second number: "))
+num1 = int(input("Enter the first number: "))
+num2 = int(input("Enter the second number: "))
 operation = input("Choose the operation (+, -, *, /): ")
-
 if operation == "+":
     result = num1 + num2
     print(f"The result is {result}")
@@ -21,4 +18,3 @@ elif operation == "/":
         print("Error: Division by zero is not allowed.")
 else:
     print("Invalid operation selected. Please choose one of +, -, *, /.")
-
