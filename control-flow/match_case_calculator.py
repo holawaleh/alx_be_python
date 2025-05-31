@@ -1,20 +1,21 @@
+# Prompt for user input
 num1 = int(input("Enter the first number: "))
 num2 = int(input("Enter the second number: "))
 operation = input("Choose the operation (+, -, *, /): ")
-if operation == "+":
-    result = num1 + num2
-    print(f"The result is {result}")
-elif operation == "-":
-    result = num1 - num2
-    print(f"The result is {result}")
-elif operation == "*":
-    result = num1 * num2
-    print(f"The result is {result}")
-elif operation == "/":
-    if num2 != 0:
-        result = num1 / num2
-        print(f"The result is {result}")
-    else:
-        print("Error: Division by zero is not allowed.")
-else:
-    print("Invalid operation selected. Please choose one of +, -, *, /.")
+
+# Perform the calculation using match-case
+match operation:
+    case '+':
+        print("The result is", num1 + num2)
+    case '-':
+        print("The result is", num1 - num2)
+    case '*':
+        print("The result is", num1 * num2)
+    case '/':
+        if num2 != 0:
+            print("The result is", num1 / num2)
+        else:
+            print("Cannot divide by zero")
+    case _:
+        print("Invalid operation")
+
